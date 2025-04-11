@@ -59,6 +59,9 @@ export const fetchEbookModules = (ebookId) => {
   return apiService
     .fetchData(`/minimal/ebook-modules?ebookId=${ebookId}`)
     .then((response) => {
+      console.log(response.data, "response from ebook modules");
+      console.log(response.data.ebookModules, "response from ebook modules");
+
       return response.data;
     })
     .catch((error) => {

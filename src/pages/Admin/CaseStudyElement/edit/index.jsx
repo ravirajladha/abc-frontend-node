@@ -33,11 +33,16 @@ function Edit() {
   const fetchData = async () => {
     try {
       const response = await fetchCaseStudyElement(caseStudyElementId);
+      const element = response.element;
       setElementType(response.element.case_study_element_type_id);
       setSelectedElementId(response.element.case_study_element_type_id);
       // Split the comma-separated string into an array
-      const arrayFromCommaSeparatedString =
-        response.element.list_points.split('#@#');
+      const arrayFromCommaSeparatedString = element.list_points
+      ? element.list_points.split('#@#') // Split only if it’s a string
+      : [];
+      
+      // const arrayFromCommaSeparatedString =
+      //   response.element.list_points.split('#@#');
       // Store the array back in the same key
       const updatedElement = {
         ...response.element,

@@ -136,7 +136,7 @@ function Subjects({ title }) {
                 >
                   {item.image && (
                     <img
-                      src={baseUrl + item.image}
+                      src={ item.image}
                       alt="icon"
                       className="p-1 w-100 object-fit-cover fixed-avatar"
                     />

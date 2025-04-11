@@ -39,7 +39,7 @@ function Index() {
     } else {
       try {
         const response = await authService.register({
-          name: formData.name,
+          username: formData.name,
           email: formData.email,
           password: formData.password,
           confirm_password: formData.confirm_password,

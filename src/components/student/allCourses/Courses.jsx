@@ -58,7 +58,7 @@ function AllCourses() {
                     className="video-bttn position-relative d-block h-100"
                   >
                     <img
-                      src={baseUrl + course.image}
+                      src={ course.image}
                       alt="course"
                       className="w-100 h-100"
                       style={{ objectFit: 'cover' }}
