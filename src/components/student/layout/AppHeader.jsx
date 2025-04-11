@@ -10,7 +10,6 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 import LogOutButton from '@/components/common/LogoutButton';
 
 function AppHeader({ toggleNav }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const studentData = JSON.parse(getStudentDataFromLocalStorage());
 
   return (
@@ -54,7 +53,7 @@ function AppHeader({ toggleNav }) {
               <img
                 src={
                   studentData['profile_image']
-                    ? baseUrl + studentData['profile_image']
+                    ? studentData['profile_image']
                     : DefaultProfileImage
                 }
                 alt="user"

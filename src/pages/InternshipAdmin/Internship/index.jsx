@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const Internship = ({ title }) => {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const staticInternshipsData = [
     {

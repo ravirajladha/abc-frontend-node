@@ -7,7 +7,6 @@ import { fetchVideoDetails } from '@/api/admin';
 import { formatDateTime } from '@/utils/helpers';
 
 function Show() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const { courseId, subjectId, chapterId, contentId } = useParams();
 
@@ -59,7 +58,7 @@ function Show() {
                   <div className="card border-0 mb-0 rounded-lg overflow-hidden">
                     <div className="react-player">
                       <video
-                        src={baseUrl + 'uploads/' + video?.url}
+                        src={video?.url}
                         preload="auto"
                         // autoPlay
                         controls

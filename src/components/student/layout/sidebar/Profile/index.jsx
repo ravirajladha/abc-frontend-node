@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import DefaultProfileImage from '@/assets/images/default/student.png';
 
 function Profile({ studentData }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
+
   return (
     <div className="card overflow-hidden subscribe-widget p-3 mb-3 rounded-xxl border-0">
       <div
@@ -14,7 +14,7 @@ function Profile({ studentData }) {
           <img
             src={
               studentData['profile_image']
-                ? baseUrl + studentData['profile_image']
+                ?  studentData['profile_image']
                 : DefaultProfileImage
             }
             alt="avatar"

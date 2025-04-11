@@ -22,7 +22,6 @@ import { getUserDataFromLocalStorage } from '@/utils/services';
 import { Paragraph } from '@/components/admin/project-report/viewElements';
 
 function Show({ title, isAdmin, isMobile }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const { projectReportId } = useParams();
 
@@ -241,7 +240,7 @@ function Show({ title, isAdmin, isMobile }) {
               <div id="" className="doc-wrapper">
                 <div className="doc-preview d-flex justify-content-center">
                   <img
-                    src={baseUrl + projectReport.image}
+                    src={ projectReport.image}
                     alt="preview"
                     className="introduction-img"
                     style={{ width: '60%', height: 'auto' }}

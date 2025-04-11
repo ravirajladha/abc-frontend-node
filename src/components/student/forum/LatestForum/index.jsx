@@ -8,7 +8,6 @@ import DefaultProfileImage from '@/assets/images/default/student.png';
 import { ContentLoader } from '@/components/common';
 
 function LatestForum() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const [forumData, setForumData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -64,7 +63,7 @@ function LatestForum() {
                           <img
                             src={
                               item.profile_image
-                                ? baseUrl + item.profile_image
+                                ? item.profile_image
                                 : DefaultProfileImage
                             }
                             alt="user"

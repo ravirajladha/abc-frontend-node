@@ -7,7 +7,7 @@ import DefaultProfileImage from '@/assets/images/default/student.png';
 import { formatNumber } from '@/utils/helpers';
 
 function StudentReportCard({ studentData, reportData }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
+
 
   const termTotals = [0, 0, 0];
 
@@ -51,7 +51,7 @@ function StudentReportCard({ studentData, reportData }) {
                     <img
                       src={
                         studentData['profile_image']
-                          ? baseUrl + studentData['profile_image']
+                          ?  studentData['profile_image']
                           : DefaultProfileImage
                       }
                       alt="avatar"

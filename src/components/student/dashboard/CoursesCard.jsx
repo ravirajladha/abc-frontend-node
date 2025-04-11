@@ -14,7 +14,7 @@ function CoursesCard({ title }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showAll, setShowAll] = useState(false);
-  const baseUrl = import.meta.env.VITE_BASE_URL;
+
 
   const navigate = useNavigate();
   const studentData = JSON.parse(getStudentDataFromLocalStorage());

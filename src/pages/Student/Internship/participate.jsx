@@ -15,7 +15,6 @@ import { getInternshipTasks } from '@/api/admin';
 import { ContentHeader, ContentLoader } from '@/components/common';
 
 function InternshipParticipate({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const studentData = useOutletContext();
   const studentId = studentData.student_auth_id;
@@ -275,7 +274,7 @@ function InternshipParticipate({ title }) {
 
             {certificateGenerated && (
               // <a
-              //   href={baseUrl + certificate}
+              //   href={ certificate}
               //   target="_blank"
               //   rel="noopener noreferrer"
               //   className="mt-1 btn bg-success float-right text-center text-white font-xsss fw-600 p-3 w175 rounded-lg d-inline-block border-0"

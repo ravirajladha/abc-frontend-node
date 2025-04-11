@@ -13,7 +13,6 @@ import { getUserDataFromLocalStorage } from '@/utils/services';
 import DefaultProfileImage from '@/assets/images/default/user.png';
 
 function Profile() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const userData = JSON.parse(getUserDataFromLocalStorage());
   const parentId = userData.id;
@@ -56,7 +55,7 @@ function Profile() {
                       <img
                         src={
                           profile?.profile_image
-                            ? baseUrl + profile?.profile_image
+                            ?  profile?.profile_image
                             : DefaultProfileImage
                         }
                         alt="avatar"

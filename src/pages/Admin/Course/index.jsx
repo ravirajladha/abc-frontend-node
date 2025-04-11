@@ -15,7 +15,6 @@ import {
 } from '@/components/common';
 
 function Subjects({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   let { subjectId } = useParams();
 

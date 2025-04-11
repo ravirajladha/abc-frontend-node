@@ -2,7 +2,6 @@ import { ContentLoader } from '@/components/common';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 function Subjects({ subjects, loading }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   return (
     <div className="card theme-light-bg overflow-hidden rounded-xxl border-0 mb-3">
       <div className="card-body d-flex justify-content-between align-items-end pl-4 pr-4 pt-4 pb-3">
@@ -23,7 +22,7 @@ function Subjects({ subjects, loading }) {
                 <div className="col-3 p-0">
                   <div className="btn-round-lg rounded-lg bg-lightblue ml-3 img-fluid">
                     <img
-                      src={baseUrl + value.image}
+                      src={value.image}
                       alt="icon"
                       className="p-1 w-100 font-xsssss "
                     />

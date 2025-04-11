@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import DefaultStudentImage from '@/assets/images/default/student.png';
 
 function ChatUserList({ imageUrl, name, studentClass, status, onClick }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   return (
     <li
@@ -14,7 +13,7 @@ function ChatUserList({ imageUrl, name, studentClass, status, onClick }) {
         <img
           src={
             imageUrl
-              ? `${baseUrl}${imageUrl}`
+              ? `${imageUrl}`
               : DefaultStudentImage
           }
           alt="Avatar"

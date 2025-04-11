@@ -27,7 +27,6 @@ import { Points } from '@/components/admin/case-study/viewElements';
 import Appendices from '@/components/admin/case-study/viewElements/Appendices';
 
 function Show({ title, isAdmin, isMobile }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const { caseStudyId } = useParams();
 
@@ -251,7 +250,7 @@ function Show({ title, isAdmin, isMobile }) {
               <div id="" className="doc-wrapper">
                 <div className="doc-preview d-flex justify-content-center">
                   <img
-                    src={baseUrl + caseStudy.image}
+                    src={ caseStudy.image}
                     alt="preview"
                     className="introduction-img"
                     style={{ width: '60%', height: 'auto' }}

@@ -2,7 +2,6 @@ import React from 'react';
 import DefaultTrainerImage from '@/assets/images/default/trainer.png';
 
 const index = ({ trainer }) => {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   return (
     <div className="card d-block border-0 rounded-lg overflow-hidden p-4 shadow-xss mt-4 bg-lightblue">
@@ -14,7 +13,7 @@ const index = ({ trainer }) => {
           <img
             src={
               trainer?.profile_image
-                ? baseUrl + trainer?.profile_image
+                ?  trainer?.profile_image
                 : DefaultTrainerImage
             }
             alt="avatar"

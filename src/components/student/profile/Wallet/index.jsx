@@ -4,7 +4,6 @@ import { ContentLoader } from '@/components/common';
 import { formatDateTime, formatNumber } from '@/utils/helpers';
 
 function Wallet({ studentData, walletData, walletLogs, loading }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const shareReferralCode = () => {
     navigator.clipboard.writeText(studentData.student_unique_code);
     alert('Referral code copied to clipboard!');
@@ -34,7 +33,7 @@ function Wallet({ studentData, walletData, walletLogs, loading }) {
                         <img
                           src={
                             studentData.profile_image
-                              ? baseUrl + studentData.profile_image
+                              ? studentData.profile_image
                               : DefaultProfileImage
                           }
                           alt="avatar"

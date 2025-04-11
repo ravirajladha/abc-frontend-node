@@ -5,16 +5,12 @@ import { getUserDataFromLocalStorage } from '@/utils/services';
 
 const useLabDetails = (labId, selectedLevel, setCode,setIsLoading,studentView, isShowCodebase,
   elab_submission_id=null) => {
-  // console.log("111lab_id", labId);
-  // const baseUrl = import.meta.env.VITE_REACT_APP_BASE_URL;
   const user_detail = JSON.parse(getUserDataFromLocalStorage());
   const [labs, setLabs] = useState({});
   const [testCases, setTestCases] = useState([]);
   const [languageId, setLanguageId] = useState([]);
   const [harnessCode, setHarnessCode] = useState("");
   const [error, setError] = useState(null);
-// console.log("student vidw", studentView)
-// console.log("isShowCodebase", elab_submission_id)
 
 useEffect(() => {
   const fetchLabDetails = async () => {

@@ -7,7 +7,6 @@ function CoursesCertificate({ title }) {
   const { courseId } = useParams();
   const [filePath, setFilePath] = useState('');
   const [loading, setLoading] = useState(true);
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const handleGenerateCertificate = async () => {
     try {
@@ -31,7 +30,7 @@ const handleDownload = async () => {
         }
 
         // Call your backend to download the certificate
-        const response = await fetch(`${baseUrl}api/download-certificate?filePath=${encodeURIComponent(filePath)}`, {
+        const response = await fetch(`api/download-certificate?filePath=${encodeURIComponent(filePath)}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -65,7 +64,7 @@ const handleDownload = async () => {
       <ContentHeader title={title} />
       <div className="d-flex justify-content-center">
         <img
-          src={baseUrl + filePath}
+          src={ filePath}
           alt="Certificate"
           style={{ height: '70vh' }}
         />

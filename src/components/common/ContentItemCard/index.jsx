@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function ContentItemCard({ data, buttons, handleDelete, handleEdit }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
+
   const user = JSON.parse(getUserDataFromLocalStorage());
   return (
     <div className="col-xl-3 col-lg-4 col-md-6 mt-2">
@@ -33,7 +33,7 @@ function ContentItemCard({ data, buttons, handleDelete, handleEdit }) {
           >
             {data.image && (
               <img
-                src={baseUrl + data.image}
+                src={ data.image}
                 alt="icon"
                 className="p-1 w-100 object-fit-cover"
               />

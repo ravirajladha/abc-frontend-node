@@ -15,7 +15,6 @@ import { setUserDataInLocalStorage } from '@/utils/helpers';
 import DefaultProfileImage from '@/assets/images/default/user.png';
 
 function Index() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const navigate = useNavigate();
   const { trainerId } = useParams();
@@ -113,7 +112,7 @@ function Index() {
                             formData.profile_image instanceof File
                               ? URL.createObjectURL(formData.profile_image) // New image preview
                               : formData.profile_image
-                              ? baseUrl + formData.profile_image
+                              ?  formData.profile_image
                               : DefaultProfileImage // URL from backend or default image
                           }
                           alt="thumbnail"

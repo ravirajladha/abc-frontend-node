@@ -12,7 +12,6 @@ import {
 import { getStudentImages, deleteStudentImage } from '@/api/admin';
 
 function Show({ title,isPrivate, isPublic}) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const { studentId } = useParams();
   const [loading, setLoading] = useState(true);
   const [studentImage, setStudentImageData] = useState(null);
@@ -81,7 +80,7 @@ function Show({ title,isPrivate, isPublic}) {
                   {studentImage.images.map((item, index) => (
                     <div key={index} className="image-card">
                       <img
-                        src={baseUrl + item.image_path}
+                        src={ item.image_path}
                         alt="Student Image"
                         className="uniform-image"
                       />
@@ -89,7 +88,7 @@ function Show({ title,isPrivate, isPublic}) {
                         <button
                           className="bg-current float-right border-0 text-center text-white font-xsss fw-600 p-3  rounded-sm d-inline-block"
                           onClick={() =>
-                            handleViewImage(baseUrl + item.image_path)
+                            handleViewImage(item.image_path)
                           }
                         >
                           <i className="feather-eye"></i>{' '}

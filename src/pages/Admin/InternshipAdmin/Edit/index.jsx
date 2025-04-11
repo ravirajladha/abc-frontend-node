@@ -12,7 +12,6 @@ function Edit({ title }) {
 
   const fileInputRef = useRef();
   const fileLogoInputRef = useRef();
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const [form, setForm] = useState({
     name: '',
@@ -458,7 +457,7 @@ function Edit({ title }) {
                          Image
                         {form.image ? (
                           <a
-                            href={baseUrl + form.image} // URL of the uploaded image
+                            href={ form.image} // URL of the uploaded image
                             target="_blank"
                             rel="noopener noreferrer"
                             className="ml-2"
@@ -507,7 +506,7 @@ function Edit({ title }) {
                          Logo
                         {form.logo ? (
                           <a
-                            href={baseUrl + form.logo} // URL of the uploaded image
+                            href={ form.logo} // URL of the uploaded image
                             target="_blank"
                             rel="noopener noreferrer"
                             className="ml-2"

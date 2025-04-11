@@ -13,7 +13,6 @@ import {
 } from '@/components/common';
 
 function Show() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const { courseId, subjectId, chapterId } = useParams();
   const [chapterData, setChapterData] = useState();
   const [contents, setContents] = useState();
@@ -106,7 +105,7 @@ function Show() {
                   <figure className="avatar position-relative z-index-1 overflow-hidden">
                     {chapterData.chapter_image && (
                       <img
-                        src={baseUrl + chapterData.chapter_image}
+                        src={ chapterData.chapter_image}
                         alt="icon"
                         className="float-right p-1 user-select-none img-fluid img-thumbnail bg-white rounded-circle w150 h150"
                       />

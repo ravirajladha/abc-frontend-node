@@ -12,7 +12,6 @@ import {
 import { getStudentDataFromLocalStorage } from '@/utils/services';
 
 function Index() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const studentData = JSON.parse(getStudentDataFromLocalStorage());
 

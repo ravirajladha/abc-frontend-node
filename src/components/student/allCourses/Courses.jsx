@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import StarRatings from 'react-star-ratings';
 
 function AllCourses() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
+
   const navigate = useNavigate();
   const studentData = JSON.parse(getStudentDataFromLocalStorage());
 

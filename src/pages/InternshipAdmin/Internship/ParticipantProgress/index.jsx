@@ -3,7 +3,6 @@ import { toast } from 'react-toastify';
 import { ContentHeader } from '@/components/common';
 
 function Internship({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const [tasks, setTasks] = useState([
     { id: 1, name: 'Task 1', status: 'Not Started' },

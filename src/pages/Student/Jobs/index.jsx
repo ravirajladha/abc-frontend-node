@@ -18,8 +18,6 @@ function Jobs() {
   // const classId = studentData.class_id;
   const navigate = useNavigate();
 
-  const baseUrl = import.meta.env.VITE_BASE_URL;
-
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -139,7 +137,7 @@ function Jobs() {
               <div className="card mb-4 d-block w-100 shadow-xss rounded-lg p-xxl-5 p-4 border-0 text-center">
               <figure className="avatar position-relative w-110 z-index-1 w100 z-index-1 mr-auto ml-auto">
                   <img
-                    src={baseUrl + job.image}
+                    src={ job.image}
                     alt="image"
                   className="p-3 bg-greylight rounded-lg w-100"
                     style={{ maxWidth: '100%', height: 'auto' }}

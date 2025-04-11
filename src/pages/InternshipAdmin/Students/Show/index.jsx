@@ -9,7 +9,6 @@ import No_image from '@/assets/images/no_image.png';
 import DefaultProfileImage from '@/assets/images/default/student.png';
 
 function Show({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const { studentId } = useParams();
   const [student, setStudentDetails] = useState(null);
@@ -42,7 +41,7 @@ function Show({ title }) {
                       <img
                         src={
                           student?.profile_image
-                            ? baseUrl + student?.profile_image
+                            ?  student?.profile_image
                             // : DefaultProfileImage
                             : DefaultProfileImage
                         }

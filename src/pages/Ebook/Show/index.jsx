@@ -52,7 +52,6 @@ import { ContentFallback, ContentLoader } from '@/components/common';
 import { getUserDataFromLocalStorage } from '@/utils/services';
 //show the buttons for realted case study or report
 function Show({ title, isAdmin, isMobile }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const { ebookId, moduleId, sectionId } = useParams();
 
   const [loading, setLoading] = useState(true);
@@ -308,7 +307,7 @@ function Show({ title, isAdmin, isMobile }) {
               <div id="" className="doc-wrapper">
                 <div className="doc-preview d-flex justify-content-center">
                   <img
-                    src={baseUrl + ebook.image}
+                    src={ebook.image}
                     alt="preview"
                     className="introduction-img"
                     style={{ width: '30%', height: 'auto' }}

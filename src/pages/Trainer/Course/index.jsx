@@ -14,7 +14,6 @@ import {
 
 function Course() {
   let { subjectId } = useParams();
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const [subjectName, setSubjectName] = useState(null);
   const [coursesData, setCoursesData] = useState(null);
@@ -68,7 +67,7 @@ function Course() {
                 >
                   {item.image && (
                     <img
-                      src={baseUrl + item.image}
+                      src={item.image}
                       alt="icon"
                       className="p-1 w-100 object-fit-cover fixed-avatar"
                     />

@@ -13,7 +13,6 @@ function Dashboard() {
   const [dashboard, setDashboard] = React.useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const fetchDashboardItems = useCallback(async () => {
     fetchDashboard()
@@ -136,7 +135,7 @@ function Dashboard() {
                               className="video-bttn small-icon"
                             >
                               <img
-                                src={`${baseUrl + value.subject_image}`}
+                                src={`${ value.subject_image}`}
                                 alt="product"
                                 className="w125 d-inline-block p-0 bg-greylight rounded-lg overflow-hidden"
                               />

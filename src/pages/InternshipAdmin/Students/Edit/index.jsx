@@ -21,7 +21,6 @@ function Edit() {
   const [loading, setLoading] = useState(true);
   const [subjects, setSubjects] = useState([]);
   const [sections, setSections] = useState([]);
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const [validationErrors, setValidationErrors] = useState({});
   const [passwordMatch, setPasswordMatch] = useState(true);
@@ -234,7 +233,7 @@ function Edit() {
                     Profile Image
                     {form.profile_image ? (
                       <a
-                        href={baseUrl + form.profile_image} // URL of the uploaded image
+                        href={ form.profile_image} // URL of the uploaded image
                         target="_blank"
                         rel="noopener noreferrer"
                         className="ml-2"

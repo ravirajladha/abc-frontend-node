@@ -62,7 +62,6 @@ function Editor1({ title, studentView, isTestCode, isShowCodebase }) {
   // console.log('isTestCode:', isTestCode); // Check the isTestCode prop
   // console.log('isShowCodebase:', isShowCodebase); // Check the isShowCodebase prop
 
-  const baseUrl = import.meta.env.VITE_APP_URL;
   const [code, setCode] = useState('Editor Loading...');
   const [activeTab, setActiveTab] = useState('testcases');
   const [messages, setMessages] = useState([]);

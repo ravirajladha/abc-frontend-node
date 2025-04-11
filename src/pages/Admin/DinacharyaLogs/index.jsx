@@ -20,7 +20,6 @@ import ContentSelectFilter from '@/components/common/ContentSelectFilter';
 import { Spinner } from 'react-bootstrap';
 
 function PublicStudent({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const user_detail = JSON.parse(getUserDataFromLocalStorage());
   const createdBy = user_detail?.id;
   const [students, setStudents] = useState([]);

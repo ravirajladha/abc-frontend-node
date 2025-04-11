@@ -17,7 +17,6 @@ import { fetchContents, fetchExternalStudentContents } from '@/api/student';
 import { getUserDataFromLocalStorage } from '@/utils/services';
 import { Tab, Tabs } from 'react-bootstrap';
 
-const baseUrl = import.meta.env.VITE_BASE_URL;
 
 function Learn() {
   const studentData = useOutletContext();
@@ -90,7 +89,7 @@ function Learn() {
         video.querySelector('i').classList.add('feather-pause-circle');
         const defaultSources = [
           {
-            src: baseUrl + 'api/video/playlist/' + videoFile,
+            src: 'api/video/playlist/' + videoFile,
             type: 'application/x-mpegURL',
           },
         ];
@@ -148,7 +147,7 @@ function Learn() {
 
         const defaultSources = [
           {
-            src: baseUrl + 'api/video/playlist/' + data.contents.video.url,
+            src: 'api/video/playlist/' + data.contents.video.url,
             type: 'application/x-mpegURL',
           },
         ];
@@ -183,7 +182,7 @@ function Learn() {
       ...prevOptions,
       sources: [
         {
-          src: baseUrl + 'api/video/playlist/' + activeVideo.url,
+          src: 'api/video/playlist/' + activeVideo.url,
           type: 'application/x-mpegURL',
         },
       ],

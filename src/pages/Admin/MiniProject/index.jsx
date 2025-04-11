@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { getMiniProjects } from '@/api/admin';
 function MiniProject({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const [miniProjectsData, setMiniProjectsData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -105,7 +104,7 @@ function MiniProject({ title }) {
                               {/* Column for the image */}
                               {item.image && ( // Check if there's an image URL
                                 <img
-                                  src={baseUrl + item.image}
+                                  src={ item.image}
                                   alt="Mini Project Image"
                                   style={{ width: '50px', height: 'auto' }}
                                 />

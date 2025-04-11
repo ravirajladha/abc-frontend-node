@@ -14,7 +14,6 @@ import { fetchSubjects } from '@/api/dropdown';
 import { getUserDataFromLocalStorage } from '@/utils/services';
 
 function Job(props) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const userData = JSON.parse(getUserDataFromLocalStorage());
 
   const [jobs, setJobs] = useState([]);
@@ -350,7 +349,7 @@ function Job(props) {
                     className="btn-round-xxxl rounded-lg bg-lightblue ml-auto mr-auto"
                   >
                     <img
-                      src={baseUrl + selectedJob?.image}
+                      src={selectedJob?.image}
                       alt="image"
                       className="p-1"
                       style={{ maxWidth: '100%', height: 'auto' }}

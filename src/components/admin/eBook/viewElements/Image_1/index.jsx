@@ -9,7 +9,6 @@ function Index({
   enableEdit,
   onDelete,
 }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const sectionId = element.ebook_section_id;
   const elementId = element.id;
   return (
@@ -26,7 +25,7 @@ function Index({
       )}
       <div className="doc-info text-center">
         <img
-          src={baseUrl + element.image}
+          src={ element.image}
           className="img-fluid"
           alt="Responsive image"
           style={{ width: '40%', height: 'auto' }}

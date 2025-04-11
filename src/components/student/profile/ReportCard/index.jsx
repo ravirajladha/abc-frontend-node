@@ -7,7 +7,6 @@ import { formatNumber } from '@/utils/helpers';
 import { ContentLoader } from '@/components/common';
 
 function ReportCard({ studentData, reportData, loading }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const d = new Date();
   let year = d.getFullYear();
 
@@ -35,7 +34,7 @@ function ReportCard({ studentData, reportData, loading }) {
                         <img
                           src={
                             studentData['profile_image']
-                              ? baseUrl + studentData['profile_image']
+                              ? studentData['profile_image']
                               : DefaultProfileImage
                           }
                           alt="avatar"

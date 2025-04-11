@@ -24,7 +24,6 @@ import {
 import { fetchFeeDetails } from '@/api/admin';
 
 function Subjects() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
   const { courseId } = useParams();
   // const studentData = useOutletContext();
   const navigate = useNavigate();
@@ -120,7 +119,7 @@ function Subjects() {
                   className="react-player"
                   playing
                   // light={`assets/images/${value.videoimage}`}
-                  url={baseUrl + courses.video}
+                  url={ courses.video}
                 />
               </div>
               <div className="card d-block border-0 rounded-lg overflow-hidden dark-bg-transparent bg-transparent mt-4 pb-3">

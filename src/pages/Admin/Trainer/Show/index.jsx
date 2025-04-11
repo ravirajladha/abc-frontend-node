@@ -12,7 +12,6 @@ import {
 import { fetchTrainer } from '@/api/internshipAdmin';
 
 function Show({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const { trainerId } = useParams();
   const [trainer, setTrainerDetails] = useState(null);
@@ -53,7 +52,7 @@ function Show({ title }) {
                           <img
                             src={
                               trainer?.profile_image
-                                ? baseUrl + trainer?.profile_image
+                                ?  trainer?.profile_image
                                 : DefaultProfileImage
                             }
                             alt="avatar"

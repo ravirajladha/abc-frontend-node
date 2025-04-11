@@ -14,7 +14,7 @@ import { NavTab } from '@/components/admin/internship-admin';
 import { getInternshipAdminData } from '@/api/admin';
 
 function Show({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
+  
 
   const { internshipAdminId } = useParams();
   const [loading, setLoading] = useState(true);
@@ -62,7 +62,7 @@ function Show({ title }) {
               <div className="mb-4 d-block w-100 rounded-lg  border-0 text-center">
                 <figure className="avatar ml-auto mr-auto mb-0 w150 overflow-hidden">
                   <img
-                    src={internshipAdminData?.image ? baseUrl + internshipAdminData?.image : No_image}
+                    src={internshipAdminData?.image ?  internshipAdminData?.image : No_image}
                     alt="avatar"
                     className="shadow-lg w-100 p-1"
                   />
@@ -70,7 +70,7 @@ function Show({ title }) {
                 <h4 className="fw-700 font-xs my-3"> Image</h4>
                 <figure className="avatar ml-auto mr-auto mb-0 w150 overflow-hidden">
                   <img
-                    src={internshipAdminData?.logo ? baseUrl + internshipAdminData?.logo : No_image}
+                    src={internshipAdminData?.logo ?  internshipAdminData?.logo : No_image}
                     alt="avatar"
                     className="shadow-lg w-100 p-1"
                   />

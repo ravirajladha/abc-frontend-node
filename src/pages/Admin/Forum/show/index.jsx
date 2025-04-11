@@ -17,7 +17,6 @@ import { formatDateTime } from '@/utils/helpers';
 import { AnswerForm } from '@/components/student/forum';
 
 function Show() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const { forumId } = useParams();
 
@@ -78,7 +77,7 @@ function Show() {
                     <img
                       src={
                         forum.question?.profile_image
-                          ? baseUrl + forum.question?.profile_image
+                          ? forum.question?.profile_image
                           : DefaultProfileImage
                       }
                       alt="avatar"
@@ -112,7 +111,7 @@ function Show() {
                           <img
                             src={
                               answer?.profile_image
-                                ? baseUrl + answer?.profile_image
+                                ?  answer?.profile_image
                                 : DefaultProfileImage
                             }
                             alt="student"

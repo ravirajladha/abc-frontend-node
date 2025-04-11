@@ -12,7 +12,6 @@ import {
 import { fetchRecruiter } from '@/api/admin';
 
 function Show({ title }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const { recruiterId } = useParams();
   const [recruiter, setRecruiterDetails] = useState(null);
@@ -54,7 +53,7 @@ function Show({ title }) {
                           <img
                             src={
                               recruiter?.profile_image
-                                ? baseUrl + recruiter?.profile_image
+                                ? recruiter?.profile_image
                                 : DefaultProfileImage
                             }
                             alt="avatar"

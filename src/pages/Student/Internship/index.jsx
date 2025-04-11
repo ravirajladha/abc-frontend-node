@@ -10,7 +10,6 @@ import { Tab, Tabs } from 'react-bootstrap';
 function Internship({ title }) {
   const [internships, setInternshipsData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const studentData = JSON.parse(getStudentDataFromLocalStorage());
   console.log('student data from the local storage', studentData);
@@ -54,7 +53,7 @@ function Internship({ title }) {
                       <figure className="avatar position-relative w-110 z-index-1 w100 z-index-1 mr-auto ml-auto">
                         <img
                           // src={`${baseUrl}${internship.project_image}`}
-                          src={baseUrl + internship.image}
+                          src={ internship.image}
                           alt={`Image ${index + 1}`}
                           className="p-3 bg-greylight rounded-lg w-100"
                         />
@@ -115,7 +114,7 @@ function Internship({ title }) {
                     <div className="card-body d-block pt-4 text-center">
                       <figure className="avatar position-relative w-110 z-index-1 w100 z-index-1 mr-auto ml-auto">
                         <img
-                          src={baseUrl + internship.image}
+                          src={ internship.image}
                           alt={`Image ${index + 1}`}
                           className="p-3 bg-greylight rounded-lg w-100"
                         />

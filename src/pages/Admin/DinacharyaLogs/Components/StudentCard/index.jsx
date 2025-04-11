@@ -20,7 +20,7 @@ const StudentCard = ({ students, loading, baseUrl, toggleModal }) => (
                   <img
                     src={
                       student?.profile_image
-                        ? baseUrl + student?.profile_image
+                        ?  student?.profile_image
                         : DefaultProfileImage
                     }
                     alt="avatar"

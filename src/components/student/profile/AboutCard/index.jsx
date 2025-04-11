@@ -9,7 +9,6 @@ import { ContentLoader } from '@/components/common';
 import { formatDate } from '@/utils/helpers';
 
 function AboutCard({ studentData, isProfileEditable }) {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const [loading, setLoading] = useState(true);
   const [student, setstudent] = useState({});
@@ -48,7 +47,7 @@ function AboutCard({ studentData, isProfileEditable }) {
                   <img
                     src={
                       student?.profile_image
-                        ? baseUrl + student?.profile_image
+                        ? student?.profile_image
                         : DefaultProfileImage
                     }
                     alt="avatar"

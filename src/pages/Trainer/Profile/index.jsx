@@ -8,7 +8,6 @@ import { fetchTrainer } from '@/api/internshipAdmin';
 function Index({ title }) {
   const trainerData = JSON.parse(getUserDataFromLocalStorage());
   const trainerId = trainerData.id;
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const [trainer, setTrainerDetails] = useState(null);
   const [trainerCourses, setTrainerCourses] = useState(null);
@@ -53,7 +52,7 @@ function Index({ title }) {
                           <img
                             src={
                               trainer?.profile_image
-                                ? baseUrl + trainer?.profile_image
+                                ? trainer?.profile_image
                                 : DefaultProfileImage
                             }
                             alt="avatar"

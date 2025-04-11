@@ -14,7 +14,6 @@ import { fetchReadableCourses } from '@/api/student';
 import { getStudentDataFromLocalStorage } from '@/utils/services';
 
 function Index() {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const studentData = JSON.parse(getStudentDataFromLocalStorage());
   // const classId = studentData.class_id;
@@ -61,7 +60,7 @@ function Index() {
                     >
                       {readableCourse.ebook_image && (
                         <img
-                          src={baseUrl + readableCourse.ebook_image}
+                          src={ readableCourse.ebook_image}
                           alt="icon"
                           className="p-1 w-100 object-fit-cover"
                         />

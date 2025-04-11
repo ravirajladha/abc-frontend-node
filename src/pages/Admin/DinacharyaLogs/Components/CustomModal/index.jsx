@@ -11,7 +11,6 @@ const CustomModal = ({
 }) => {
 
 
-  const baseUrl = import.meta.env.VITE_BASE_URL;
 
 
 
@@ -32,7 +31,7 @@ const CustomModal = ({
                   <img
                     src={
                       studentId?.image_path
-                        ? baseUrl + studentId?.image_path
+                        ?  studentId?.image_path
                         : DefaultProfileImage
                     }
                     alt="avatar"
