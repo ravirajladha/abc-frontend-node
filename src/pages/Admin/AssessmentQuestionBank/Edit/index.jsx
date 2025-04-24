@@ -68,7 +68,8 @@ function Edit({ title }) {
   const fetchQuestionDetails = useCallback(() => {
     fetchAssessmentQuestionDetails(questionId)
       .then((response) => {
-        const questionDetails = response.assessment_question;
+        const questionDetails = response.test_question;
+        console.log(questionDetails, "inside edit assesment page");
         setFormData({
           selectedSubject: questionDetails.subject_id.toString(),
           selectedCourse: questionDetails.course_id.toString(),

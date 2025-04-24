@@ -120,6 +120,8 @@ function AssessmentTest() {
       formData.append('courseId', courseId);
       formData.append('assessmentId', assessmentId);
 
+      console.log("submitted data for the assessement", formData);
+
       const response = await storeAssessmentResponse(formData);
       setLoading(false);
       setResult(response.assessment_result);
@@ -142,6 +144,17 @@ function AssessmentTest() {
       submitAssessment();
     }
   }, [testComplete, submitAssessment]);
+
+
+
+  
+  useEffect(() => {
+    if (testComplete) {
+      submitAssessment();
+    }
+  }, [testComplete, submitAssessment]);
+
+
 
   const retakeAssessment = () => {
     setLoading(true);

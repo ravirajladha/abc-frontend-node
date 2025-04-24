@@ -30,7 +30,7 @@ const LearnTab = ({
                   userDetail.id,
                   video.elab_id
                 );
-                console.log('latest respoinse', response);
+                console.log('latest response', response);
                 elabSubmissionIdsObj[video.elab_id] = response;
               } catch (error) {
                 console.error(

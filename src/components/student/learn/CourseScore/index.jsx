@@ -35,7 +35,7 @@ function CourseScore({ results }) {
                 </div>
                 <div className="col-2 pl-0 my-auto">
                   <h4 className="font-xssss fw-600 text-grey-800">
-                    {Math.round(result?.percentage)+ '%'}
+                    {Math.round((result?.score / result?.total_score) * 100) + '%'}
                   </h4>
                 </div>
                 <div className="col-5 pl-0 my-auto">

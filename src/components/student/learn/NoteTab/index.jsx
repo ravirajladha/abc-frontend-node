@@ -54,7 +54,8 @@ function NoteTab({ isTabActive, studentId, videoPlayer, activeVideoId }) {
       formData.append('note', newNote);
       formData.append('timestamp', noteTimestamp);
       const response = await storeNotes(formData);
-      toast.success(response.message);
+      console.log(response);
+      toast.success(response);
       setAddNotesModal(false);
       setNewNote('');
       getAllStudentNotes();

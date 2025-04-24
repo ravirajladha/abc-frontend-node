@@ -394,7 +394,8 @@ export const fetchEbook = async (ebookId) => {
   const response = await apiService.fetchData(
     `/admin/ebooks/${ebookId}/getEbook`
   );
-  return response.data;
+  console.log(response);
+  return response;
 };
 
 export const fetchEbookMobile = async (ebookId) => {

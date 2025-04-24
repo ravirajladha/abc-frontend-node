@@ -33,7 +33,7 @@ export const fetchCoursesForTest = (subjectId) => {
 };
 
 export const fetchAssessments = (courseId) => {
-  return apiService
+return apiService
     .fetchData(`/minimal/assessments?courseId=${courseId}`)
     .then((response) => {
       console.log("fetching assessment data", courseId, response.data)

@@ -2,19 +2,21 @@ import { AddFieldButton, DeleteFieldButton } from '@/components/common/form';
 import React, { Fragment, useState } from 'react';
 
 const ExampleVideoPractice = ({
-    handleFileArrayChange,
+  handleFileArrayChange,
   handleInputArrayChange,
 }) => {
-  const [inputArray, setInputArray] = useState(['']);
+  const [inputArray, setInputArray] = useState(['']); // Array for managing multiple sections
 
   const deleteSection = (index) => {
     const updatedInputArray = [...inputArray];
     updatedInputArray.splice(index, 1);
     setInputArray(updatedInputArray);
   };
+
   const addSection = () => {
     setInputArray([...inputArray, '']);
   };
+
   return (
     <>
       <div className="col-lg-12">
@@ -27,7 +29,7 @@ const ExampleVideoPractice = ({
                   <input
                     type="file"
                     className="form-control-file border-size-md p-2 rounded-sm"
-                    name="example_gif"
+                    name={`example_gif_${index}`} // Use a unique name for each input to avoid conflicts
                     onChange={(e) => handleFileArrayChange(e, 'example_gif', index)}
                     accept=".gif"
                   />

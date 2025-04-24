@@ -21,7 +21,8 @@ function SidebarRight({ studentData }) {
     }
   }, []);
 
-  const studentId = studentData.student_id;
+  console.log(studentData, "studentdata");
+  const studentId = studentData.student_auth_id;
 
   const [forumData, setForumData] = useState([]);
   const [forumloading, setForumloading] = useState(true);

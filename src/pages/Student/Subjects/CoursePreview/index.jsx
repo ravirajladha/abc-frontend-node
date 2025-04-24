@@ -113,7 +113,7 @@ function Subjects() {
             <div className="col-xl-8 col-xxl-9">
               <div className="card border-0 mb-0 rounded-lg overflow-hidden">
                 <ReactPlayer
-                  controls="true"
+                  controls={true}
                   width="100%"
                   height="auto"
                   className="react-player"

@@ -59,7 +59,7 @@ export const fetchExternalStudentContents = async (courseId) => {
   const response = await apiService.fetchData(
     `student/courses/${courseId}/external-student-contents`
   );
-  console.log("api called for learn")
+  console.log("api called for learn", response)
   return response.data;
 };
 
@@ -73,6 +73,7 @@ export const fetchNotes = async (studentId, videoId) => {
 
 export const storeNotes = async (data) => {
   const response = await apiService.postData(`student/notes`, data);
+  console.log("in the main function", response);
   return response.data;
 };
 
@@ -107,6 +108,7 @@ export const fetchAssessmentDetails = async (assessmentId) => {
 };
 
 export const storeAssessmentResponse = async (data) => {
+  console.log(data,"submitted data in storeassessmentResponse");
   const response = await apiService.postData(`student/assessments`, data);
   return response.data;
 };
@@ -116,11 +118,13 @@ export const fetchTestDetails = async (testId) => {
   const response = await apiService.fetchData(`/student/tests/${testId}`);
   return response.data;
 };
+
 export const fetchTestDetailsByToken = async (token, testId) => {
   const response = await apiService.fetchData(`/student/tests/get-details-by-token/${token}/${testId}`);
-  console.log("respnse from cstudent api call", response);
+  console.log("response from student api call", response);
   return response;
 };
+
 export const fetchJobDetailsByToken = async (token, jobId) => {
   const response = await apiService.fetchData(`/student/job-tests/get-details-by-token/${token}/${jobId}`);
   console.log("respnse from cstudent api call", response);
