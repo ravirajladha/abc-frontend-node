@@ -27,7 +27,7 @@ function ExamplePractice({ element, ebookId, moduleId, enableEdit, onDelete }) {
             <>
               <div className="col-lg-6">
                 <img
-                  src={baseUrl + exampleDescriptions[0]}
+                  src={exampleDescriptions[0]}
                   className="img-thumbnail rounded-20"
                   alt="Responsive image"
                 />
@@ -43,7 +43,7 @@ function ExamplePractice({ element, ebookId, moduleId, enableEdit, onDelete }) {
               {exampleDescriptions.map((item, index) => (
                 <div key={index} className="col-lg-2 col-lg-offset-1">
                   <img
-                    src={baseUrl + exampleDescriptions[0]}
+                    src={item}
                     className="img-thumbnail rounded-20"
                     alt="Responsive image"
                   />

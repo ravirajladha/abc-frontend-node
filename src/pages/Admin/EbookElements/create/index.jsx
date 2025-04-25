@@ -67,7 +67,8 @@ function Create() {
 
         if (Array.isArray(fieldValues)) {
           fieldValues.forEach((value, index) => {
-            submissionData.append(`${fieldName}[${index}]`, value);
+            // submissionData.append(`${fieldName}[${index}]`, value);
+            submissionData.append(fieldName, value);
           });
         } else {
           // If there is only one value, treat it as a single value
